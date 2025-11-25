@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.resident.manage.ResidentsApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.967 s -- in com.resident.manage.ResidentsApplicationTests
