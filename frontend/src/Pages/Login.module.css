@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* Subtle overlay */
+  backdrop-filter: blur(4px);
+}
+
+.head {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.loginForm {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.loginForm h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.inputGroup {
+  margin-bottom: 1.5rem;
+}
+
+input,
+select {
+  width: 95%;
+  height: 48px;                /* SAME height for all inputs */
+  padding: 0 12px;             /* Same left-right padding */
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.2);
+  color: black;
+  border-radius: 8px;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;      /* Ensures consistent width */
+  appearance: none;            /* Makes select behave like input */
+}
+
+input::placeholder,
+select option {
+  color:black;
+}
+
+.errorInput {
+  border-color: #ff6b6b !important;
+  background: rgba(255, 0, 0, 0.15);
+}
+
+.errorText {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.errorMessage {
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 6px;
+  backdrop-filter: blur(5px);
+}
+
+.links {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.links a {
+  color: #d0e7ff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  background: rgba(52, 152, 219, 0.8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.loginButton:hover {
+  background: rgba(41, 128, 185, 0.9);
+  transform: translateY(-2px);
+}

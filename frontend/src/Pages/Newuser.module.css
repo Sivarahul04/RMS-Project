@@ -1,0 +1,62 @@
+/* Newuser.module.css */
+
+.new {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.new input,
+.new select {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.new input:focus,
+.new select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-top: 15px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.success {
+  color: green;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 15px;
+}
+.back{
+  max-width: 250px;
+  background-color: blueviolet;
+}

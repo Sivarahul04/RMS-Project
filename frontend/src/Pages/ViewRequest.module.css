@@ -1,0 +1,76 @@
+.container {
+  padding: 40px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.noRequests {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.listItem {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.listItem strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #007bff;
+}
+
+.listItem button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.listItem button:hover {
+  background-color: #0056b3;
+}
+
+.container > button {
+  margin-top: 30px;
+  display: block;
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container > button:hover {
+  background-color: #5a6268;
+}
+.back{
+  max-width: 400px;
+}

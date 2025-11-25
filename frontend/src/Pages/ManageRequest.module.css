@@ -1,0 +1,152 @@
+/* ManageRequest.module.css */
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+
+.error {
+  background-color: #ffdddd;
+  color: #d8000c;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.success {
+  background-color: #ddffdd;
+  color: #270;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.requestList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.requestCard {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+.requestCard:hover {
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.1);
+}
+
+.requestHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.requestHeader h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.status.Pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.In Progress {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status.Completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.Cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.requestDetails p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.requestActions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actionButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.actionButton:hover {
+  background-color: #0056b3;
+}
+
+.cancelButton {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cancelButton:hover {
+  background-color: #c82333;
+}
+
+button {
+  margin-top: 20px;
+  display: block;
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
