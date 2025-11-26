@@ -1,22 +1,32 @@
 # ---------- Build stage ----------
 FROM maven:3.9-eclipse-temurin-17 AS build
+
+# Workdir inside container
 WORKDIR /app
 
-# Copy pom and sources
-COPY pom.xml .
-COPY src ./src
+# Copy backend module completely (pom + src + others)
+COPY backend ./backend
 
-# Build jar (tests skip pannuradhu for speed)
+# Go inside backend folder
+WORKDIR /app/backend
+
+# Build Spring Boot jar (tests skip for speed)
 RUN mvn clean package -DskipTests
 
 # ---------- Run stage ----------
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:17-jre
+
 WORKDIR /app
 
-# Copy built jar from previous stage
-COPY --from=build /app/target/*.jar app.jar
+# Copy jar from build stage
+# NOTE: Jar name EXACT ah backend/target la irukra jar name ah maathu
+COPY --from=build /app/backend/target/Residents-0.0.1-SNAPSHOT.jar app.jar
 
-# Render PORT env var set pannum; Spring Boot uses server.port=${PORT:8080}
+# Render will give PORT env; pass it to Spring Boot
+ENV PORT=8080
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["sh", "-c", "java -Dserver.port=$PORT -jar app.jar"]
+
+
+
