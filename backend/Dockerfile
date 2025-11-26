@@ -1,32 +1,14 @@
-# ---------- Build stage ----------
 FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /build
 
-# Workdir inside container
-WORKDIR /app
+# Now this is OK, because context-la backend/ iruku
+COPY backend/pom.xml ./pom.xml
+COPY backend/src ./src
 
-# Copy backend module completely (pom + src + others)
-COPY backend ./backend
+RUN mvn -B package -DskipTests
 
-# Go inside backend folder
-WORKDIR /app/backend
-
-# Build Spring Boot jar (tests skip for speed)
-RUN mvn clean package -DskipTests
-
-# ---------- Run stage ----------
 FROM eclipse-temurin:17-jre
-
 WORKDIR /app
-
-# Copy jar from build stage
-# NOTE: Jar name EXACT ah backend/target la irukra jar name ah maathu
-COPY --from=build /app/backend/target/Residents-0.0.1-SNAPSHOT.jar app.jar
-
-# Render will give PORT env; pass it to Spring Boot
-ENV PORT=8080
+COPY --from=build /build/target/Residents-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-
-CMD ["sh", "-c", "java -Dserver.port=$PORT -jar app.jar"]
-
-
-
+ENTRYPOINT ["java", "-jar", "app.jar"]
